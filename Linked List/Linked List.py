@@ -26,5 +26,6 @@ class LinkedList(object):
 linkedlist = LinkedList()
 items = ['Apple', 'Elderberry', 'Carambola', '‎Bilberry', 'Pineapple', 'Banana', 'Peach', 'Kiwifruit', 'Pomegranate']
 for i in range(len(items)):
+    # add items to the linked list
     linkedlist.add(items[i])
 linkedlist.display()
