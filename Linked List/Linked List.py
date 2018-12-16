@@ -24,20 +24,22 @@ class LinkedList(object):
 
     def find(self, item):
         current = self.head
+        count = 0
         if current is None:
             return 'Head is None, noting to search'
         else:
             while current is not None:
                 if current.item == item:
-                    return 'Item found ', item
+                    count += 1
                 current = current.next
-            return 'Cannot find the item ', item
+            return count
 
 
 linkedlist = LinkedList()
-items = ['Apple', 'Elderberry', 'Carambola', '‎Bilberry', 'Pineapple', 'Banana', 'Peach', 'Kiwifruit', 'Pomegranate']
+items = ['Apple', 'Elderberry', 'Carambola', '‎Bilberry', 'Pineapple', 'Banana', 'Peach', 'Kiwifruit', 'Pomegranate',
+         'Banana']
 for i in range(len(items)):
     # add items to the linked list
     linkedlist.add(items[i])
 linkedlist.display()
-print(linkedlist.find('Apple'))
+print('Found ', linkedlist.find('Banana'), ' items')
