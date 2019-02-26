@@ -16,6 +16,11 @@ class LinkedList(object):
             temp_node.next = self.head
             self.head = temp_node
 
+    def insert_in_beginning(self, item):
+        temp_node = Node(item)
+        temp_node.next = self.head
+        self.head = temp_node
+
     def display(self):
         current = self.head
         while current is not None:
@@ -43,3 +48,6 @@ for i in range(len(items)):
     linkedlist.add(items[i])
 linkedlist.display()
 print('Found ', linkedlist.find('Banana'), ' items')
+print('-------------')
+linkedlist.insert_in_beginning('Books')
+linkedlist.display()
