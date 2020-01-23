@@ -29,3 +29,14 @@ class Stack:
 
     def __str__(self):
         return ' '.join([str(i) for i in self.stack])
+
+
+if __name__ == '__main__':
+    myStack = Stack()
+    for i in range(10):
+        myStack.push(i)
+    print(myStack)
+    myStack.pop()
+    myStack.peek()
+    myStack.size()
+    print(myStack.is_empty())
